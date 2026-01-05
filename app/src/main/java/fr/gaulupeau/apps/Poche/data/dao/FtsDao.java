@@ -53,7 +53,7 @@ public class FtsDao {
     private static void createTable(Database db, boolean ifNotExists) {
         String options = ", content=\"" + VIEW_FOR_FTS_NAME + "\""
                 + ", tokenize="
-                + (App.getSettings().isFtsIcuTokenizerEnabled() ? "icu" : "unicode61");
+                + (App.getSettings().isFtsIcuTokenizerEnabled() ? "icu" : "simple");
 
         db.execSQL("create virtual table " + getIfNotExistsConstraint(ifNotExists) +
                 TABLE_NAME + " using fts4(" +

@@ -7,7 +7,7 @@ import com.facebook.stetho.Stetho;
 import fr.gaulupeau.apps.InThePoche.BuildConfig;
 import fr.gaulupeau.apps.Poche.data.Settings;
 
-public class App extends Application {
+public class App extends androidx.multidex.MultiDexApplication {
 
     private static App instance;
 
